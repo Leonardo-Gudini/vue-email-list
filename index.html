@@ -7,9 +7,17 @@
     <title>Vue Email List</title>
 </head>
 <body>
+
+    <div id="app">
+        <h1>Genera 10 indirizzi mail</h1>
+        <button @click="generateMail()">Genera mail</button>
+        <ul>
+            <li>{{emailCasuale}}</li>
+        </ul>
+    </div>
     
 
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
 </body>
