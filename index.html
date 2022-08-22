@@ -10,9 +10,9 @@
 
     <div id="app">
         <h1>Genera 10 indirizzi mail</h1>
-        <button @click="generateMail()">Genera mail</button>
+        <!-- <button @click="generateMail()">Genera mail</button> -->
         <ul>
-            <li v-for="(mail, index) in emailCasuale" v-if="index < 10">{{mail}}</li>
+            <li v-for="email in emailCasuale">{{email}}</li>
         </ul>
     </div>
     
