@@ -2,22 +2,18 @@ var app = new Vue({
     el:"#app",
 
     data:{
-        emailCasuale: null
+        emailCasuale: [],
     },
 
     methods: {
-        generateMail() {
-            axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then( response => {
-                this.emailCasuale = response.data.response;
-            })
-        }   
-    }
 
-    // mounted() {
-    //     axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-    //     .then( mailGenerata => {
-    //         this.emailCasuale = mailGenerata.data.response;
-    //     })
-    // }
+            generateMail() {
+                axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+                .then( mail => {
+                    this.emailCasuale.push(mail.data.response);
+                    // console.log(mail.data.response);
+                    // console.log(this.emailCasuale)
+                })
+            },
+    },
 })

@@ -12,7 +12,7 @@
         <h1>Genera 10 indirizzi mail</h1>
         <button @click="generateMail()">Genera mail</button>
         <ul>
-            <li>{{emailCasuale}}</li>
+            <li v-for="(mail, index) in emailCasuale" v-if="index < 10">{{mail}}</li>
         </ul>
     </div>
     
